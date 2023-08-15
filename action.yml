@@ -23,6 +23,9 @@ inputs:
   use_stack:
     description: Use docker stack instead of docker compose ("true" or "false").
     default: 'false'
+  files_to_archive:
+    description: space separated list of files and directories to arhive
+    default: './build Dockerfile docker-compose.yml docker-env-vars
 runs:
   using: docker
   image: Dockerfile
@@ -34,3 +37,4 @@ runs:
     DOCKER_COMPOSE_FILENAME: ${{ inputs.docker_compose_filename }}
     DOCKER_COMPOSE_PREFIX: ${{ inputs.docker_compose_prefix }}
     USE_DOCKER_STACK: ${{ inputs.use_stack }}
+    FILES_TO_ARCHIVE: ${{ inputs.files_to_archive }}
