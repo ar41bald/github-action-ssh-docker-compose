@@ -25,7 +25,7 @@ inputs:
     default: 'false'
   files_to_archive:
     description: space separated list of files and directories to arhive
-    default: './build Dockerfile docker-compose.yml docker-env-vars
+    default: './build Dockerfile docker-compose.yml docker-env-vars'
 runs:
   using: docker
   image: Dockerfile
